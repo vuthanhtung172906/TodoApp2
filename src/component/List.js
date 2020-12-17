@@ -5,8 +5,8 @@ class List extends React.Component{
     render(){
         return(
             <ul>
-                {this.props.list.map(item =>(
-                    <ListItem item = {item}/>
+                {this.props.list.map((item, id) =>(
+                    <ListItem item = {item} key ={id} onDelete = {()=>this.props.onDelete(id)}/>
                 ) )}
             </ul>
         )

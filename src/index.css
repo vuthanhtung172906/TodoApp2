@@ -48,6 +48,7 @@ form button{
               inset 5px 5px 5px #0002;
   padding: 0 5px;
 }
+
 form button{
   width: 80px;
   margin-left: 15px;
@@ -80,5 +81,28 @@ ul li{
   from{
     opacity: 0;
     transform: scale(0.7);
+  }
+}
+
+ul li .row{
+  float: right;
+}
+
+ul li .row i {
+  color: teal;
+  margin-left: 15px;
+  cursor: pointer;
+}
+ul li .row i:hover{
+  color: red;
+}
+.active{
+  animation: del 0.3s linear;
+}
+
+@keyframes del{
+  to{
+    opacity: 0;
+    transform: rotate(15deg) skew(25deg) scale(0.5);
   }
 }
