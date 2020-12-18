@@ -106,3 +106,21 @@ ul li .row i:hover{
     transform: rotate(15deg) skew(25deg) scale(0.5);
   }
 }
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: teal;
+  margin: 50px 0;
+}
+
+ul li input {
+  height: 20px;
+  background-color: transparent;
+  width: 70%;
+  padding: 0px;
+  outline: none;
+  border: none;
+  box-shadow: inset -2px -2px 2px #fff7,
+              inset 2px 2px 2px #0002
+}

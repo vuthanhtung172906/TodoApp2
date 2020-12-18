@@ -1,22 +1,26 @@
 import React,{useState} from "react"
 
 function Form(props){
-    const [title , setTitle] = useState("");
+    const [item , setItem] = useState("");
 
     const handleChange = e =>{
-        setTitle(e.target.value);
+        const {value} = e.target
+        setItem(value);
     };
     const handleSubmid = e =>{
         e.preventDefault();
-        props.addTodo(title)
-        setTitle("")
+        const todo = {
+            [e.target.name]: item
+        }
+        props.addTodo(todo)
+        setItem("")
     }
     return(
-        <form onSubmit={handleSubmid}>
+        <form name ="todo" onSubmit={handleSubmid}>
             <input
             placeholder="Add To Do ..."
             type="text"
-            value={title}
+            value={item}
             onChange ={handleChange}  
             required/>
             <button type="submit">Create</button>
